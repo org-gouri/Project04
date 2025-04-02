@@ -1,0 +1,10 @@
+name: using reusable workflow
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get checkout
+        uses: actions/checkout@v3
+      - name: reusable workflow
+        uses: ./.github/workflow/reusable.yml
